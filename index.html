@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>letai laura_portfolio_2025</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1000;
+            }
+
+            .hamburger div {
+                width: 25px;
+                height: 3px;
+                background-color: black;
+                margin: 4px 0;
+            }
+
+            nav ul {
+                list-style: none;
+                position: fixed;
+                top: 20px;
+                left: -100%; 
+                width: 100%;
+                padding: 10px 20px;
+                transition: left 0.3s ease;
+                display: flex;
+                flex-direction: row; 
+                gap: 15px;
+                justify-content: center;
+            }
+
+            nav ul.active {
+                left: 0; 
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            nav ul a {
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <section id="back-to-the-top">
+                <img src="images/portfolio4.png" alt="portfolio_image">
+            </section>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul>
+                    <li><a href="#contacts">contacts</a></li>
+                    <li><a href="#introduction">introduction</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="form.html" class="button">Get in Touch with Me</a></li>
+                </ul>
+             </nav>
+        </header>
+
+        <main class="introduction">
+            <section id="introduction">
+                <h3>☜◼︎✻INTRODUCTION∴˚@%</h3>
+                <p>Graphic designer working with commercial graphic design</p>
+                <p>and with experimental design projects.</p>
+                <p>MA student studying in Moholy Nagy Művészeti Egyetem</p>
+            </section>
+            <section id="works">
+                <div class="image-container">
+                    <div>
+                        <img src="images/uvegek1.png" alt="kep" height="200">
+                        <p>aura cacia brand design</p>
+                    </div>
+                    <div>
+                        <img src="images/sotarto.png" alt="kep2" height="200">
+                        <p>brand design for radnóti theater</p>
+                    </div>
+                    <div>
+                        <img src="images/fagyi.png" alt="kep3" height="200">
+                        <p>poster design for wong kar wai films</p>
+                    </div>
+                </div>
+                <div class="image-container2">
+                    <div>
+                        <img src="images/rozmar.png" alt="kep4" height="200">
+                        <p>brand design for rozmar</p>
+                    </div>
+                    <div>
+                        <img src="images/tabi.png" alt="kep5" height="200">
+                        <p>illustrative book for tabi shoes</p>
+                    </div>
+                    <div>
+                        <img src="images/fogantatas.png" alt="kep6" height="200">
+                        <p>book about the subjects of concievement and death</p>
+                    </div>
+                </div>
+            </section>
+            <section id="contacts">
+                <h3>CONTACTS</h3>
+                <p>+36 30 452 2495</p>
+                <p>letailaura@icloud.com</p>
+                <p>instagram: @letailaura</p>
+                <p>facebook: Letai Laura</p>
+                <p>linkedn: Letai Laura</p>
+            </section>
+            <nav id="back-to-the-top">
+                <ul>
+                    <li><a href="#back-to-the-top">back to the top</a></li>
+                </ul>
+            </nav>
+        </main>
+
+        <footer>
+            <p>bye</p>
+        </footer>
+
+        <script>
+            let debounceTimer;
+            function toggleMenu() {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    const nav = document.querySelector('nav ul');
+                    nav.classList.toggle('active');
+                }, 200); 
+            }
+        </script>
+    </body>
+</html>

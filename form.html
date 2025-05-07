@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>GET IN TOUCH</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>GET IN TOUCH</h1>
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li>
+                        <button onclick="goBackToHome()" class="active">Go Back</button>
+                    </li>
+                </ul>
+            </nav>
+            <form action="#" method="get">
+                <p>please fill out this form to get in contact with me and for me to better understand your idea</p>
+                <label>
+                    name:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    email:
+                    <input type="email" name="email_adress" required>
+                </label>
+                <select name="dropdown">
+                    <option value="" disabled selected>Choose service</option> 
+                    <option value="first">brand</option>
+                    <option value="second">illustration</option>
+                    <option value="third">animation</option>
+                </select>
+                <input type="submit" value="send form">
+            </form>
+            <form>
+                <label>
+                    type your concept here:
+                    <input type="text" name="concept" required>
+                </label>
+            </form>
+        </main>
+        <script>
+            function goBackToHome() {
+                window.location.href = "index.html"; 
+            }
+        </script>
+    </body>
+</html>
